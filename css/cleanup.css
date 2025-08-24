@@ -1,1 +1,27 @@
-/* write your override styles here */
+#wall .tag-1 {          /* More specific than ".tag-1" → hides graffiti image tag-1 */
+  display: none;        /* Graffiti tag-1 is removed */
+}
+
+div#wall #tag-2 {       /* More specific than "#wall #tag-2" → targets graffiti tag-2 */
+  display: none;        /* Graffiti tag-2 is removed */
+}
+
+#wall div#tag-3.slick { /* More specific than "div#wall #tag-3.slick" → targets tag-3 */
+  display: none;        /* Graffiti tag-3 is removed */
+}
+
+body #wall #tag-4 {     /* More specific than "#wall #tag-4" → targets graffiti tag-4 */
+  display: none;        /* Graffiti tag-4 is removed */
+}
+
+#wall div.parent #tag-5.slick { /* More specific than "div#wall .parent #tag-5.slick" */
+  display: none;              /* Graffiti tag-5 is removed */
+}
+
+#wall .parent div:last-child div#tag-6 { /* More specific than "div#wall div.parent..." */
+  display: none;                            /* Graffiti tag-6 is removed */
+}
+
+#wall div.parent div > #tag-7.slick { /* More specific than "body div#wall div.parent..." */
+  display: none;                     /* Graffiti tag-7 is removed */
+}
